@@ -1,0 +1,8 @@
+{
+  "outcome": "succeeded",
+  "fix_type": "transient",
+  "resume_from": "codegen",
+  "message": "Pipeline resumed from codegen and finished.",
+  "log": "projects/FortuneMosaicGem/.resume-20261015-030120.log",
+  "attempted_at_epoch": 1792047561
+}

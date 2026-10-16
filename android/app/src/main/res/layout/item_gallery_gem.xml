@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gallery_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_small"
+    style="@style/Widget.App.Card"
+    app:cardCornerRadius="@dimen/card_radius">
+
+    <LinearLayout
+        android:id="@+id/gallery_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="72dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_medium">
+
+        <ImageView
+            android:id="@+id/gallery_gem"
+            android:layout_width="@dimen/sprite_gem_gallery"
+            android:layout_height="@dimen/sprite_gem_gallery"
+            android:contentDescription="@string/cd_gem_chip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sprite_gem_cyan" />
+
+        <LinearLayout
+            android:id="@+id/gallery_text_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_medium"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gallery_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/artwork_aqua"
+                android:textAppearance="@style/TextAppearance.App.Title"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/gallery_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/locked"
+                android:textAppearance="@style/TextAppearance.App.Label" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gallery_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:gravity="end"
+            android:text="@string/progress_fraction"
+            android:textAppearance="@style/TextAppearance.App.Value"
+            android:textColor="@color/accent_amber"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

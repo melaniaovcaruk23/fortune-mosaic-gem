@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/game_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game_gradient">
+
+    <ImageView
+        android:id="@+id/game_backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.30"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_game" />
+
+    <ImageView
+        android:id="@+id/game_grid_decor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/decor_bench_grid" />
+
+    <LinearLayout
+        android:id="@+id/game_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/game_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="@drawable/bg_header_surface"
+            android:paddingStart="@dimen/space_small"
+            android:paddingEnd="@dimen/screen_side_padding">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_pause_button"
+                android:layout_width="@dimen/icon_button_size"
+                android:layout_height="@dimen/icon_button_size"
+                android:contentDescription="@string/cd_pause"
+                style="@style/Widget.App.Button.IconOnly"
+                app:icon="@drawable/ic_pause"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/game_artwork_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/artwork_amethyst"
+                android:textAppearance="@style/TextAppearance.App.Title"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/game_score"
+                app:layout_constraintStart_toEndOf="@id/game_pause_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/game_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:accessibilityLiveRegion="polite"
+                android:minWidth="64dp"
+                android:gravity="end"
+                android:text="@string/label_score"
+                android:textColor="@color/primary_violet"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/game_board_area"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/screen_side_padding">
+
+            <com.fortunegem.mosaic.core.ui.MosaicBoardView
+                android:id="@+id/game_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/game_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_pill_accent"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/space_large"
+                android:paddingTop="@dimen/space_medium"
+                android:paddingEnd="@dimen/space_large"
+                android:paddingBottom="@dimen/space_medium"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/game_notice_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:accessibilityLiveRegion="polite"
+                    android:text="@string/no_pieces_left"
+                    android:textAppearance="@style/TextAppearance.App.Title"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/game_stat_strip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stat_strip_height"
+            android:layout_marginStart="@dimen/screen_side_padding"
+            android:layout_marginEnd="@dimen/screen_side_padding"
+            android:background="@drawable/bg_stat_strip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/space_medium"
+            android:paddingEnd="@dimen/space_medium">
+
+            <com.fortunegem.mosaic.core.ui.StatCardView
+                android:id="@+id/game_stat_pieces"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:statAccent="@color/primary_violet"
+                app:statCompact="true"
+                app:statLabel="@string/label_pieces"
+                app:statValue="@string/label_pieces" />
+
+            <com.fortunegem.mosaic.core.ui.StatCardView
+                android:id="@+id/game_stat_flaws"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:statAccent="@color/accent_rose"
+                app:statCompact="true"
+                app:statLabel="@string/label_flaws"
+                app:statValue="@string/label_flaws" />
+
+            <com.fortunegem.mosaic.core.ui.StatCardView
+                android:id="@+id/game_stat_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:statAccent="@color/accent_cyan"
+                app:statCompact="true"
+                app:statLabel="@string/label_time"
+                app:statValue="@string/label_time" />
+
+        </LinearLayout>
+
+        <com.fortunegem.mosaic.core.ui.PieceTrayView
+            android:id="@+id/game_tray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tray_height"
+            android:layout_marginTop="@dimen/space_small" />
+
+        <LinearLayout
+            android:id="@+id/game_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_side_padding"
+            android:layout_marginTop="@dimen/space_small"
+            android:layout_marginEnd="@dimen/screen_side_padding"
+            android:layout_marginBottom="@dimen/space_large"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_rotate_button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_primary"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_weight="1"
+                android:text="@string/rotate"
+                style="@style/Widget.App.Button.Secondary"
+                app:icon="@drawable/ic_rotate" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/game_place_button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_primary"
+                android:layout_marginStart="@dimen/space_small"
+                android:layout_weight="1"
+                android:text="@string/place"
+                style="@style/Widget.App.Button.Accent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

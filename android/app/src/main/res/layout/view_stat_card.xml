@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <View
+        android:id="@+id/stat_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="@dimen/space_tiny"
+        android:background="@drawable/bg_accent_dot" />
+
+    <TextView
+        android:id="@+id/stat_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:accessibilityLiveRegion="polite"
+        android:maxLines="1"
+        android:text="@string/first_cut_awaits"
+        android:textAppearance="@style/TextAppearance.App.Value" />
+
+    <TextView
+        android:id="@+id/stat_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/label_best"
+        android:textAppearance="@style/TextAppearance.App.Label" />
+
+</merge>

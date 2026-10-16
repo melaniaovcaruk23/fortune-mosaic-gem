@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_splash_gradient" />
+    <item android:drawable="@drawable/decor_prism_rays" android:gravity="center" android:width="320dp" android:height="320dp" />
+    <item android:drawable="@drawable/sprite_gem_violet" android:gravity="center" android:width="140dp" android:height="140dp" />
+</layer-list>

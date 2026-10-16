@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FortuneMosaicGem" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_violet</item>
+        <item name="colorOnPrimary">@color/text_on_violet</item>
+        <item name="colorSecondary">@color/accent_cyan</item>
+        <item name="colorOnSecondary">@color/text_on_violet</item>
+        <item name="colorTertiary">@color/accent_amber</item>
+        <item name="android:colorBackground">@color/bg_base</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOutline">@color/stroke_soft</item>
+        <item name="android:windowBackground">@drawable/window_background</item>
+        <item name="android:statusBarColor">@color/splash_top</item>
+        <item name="android:navigationBarColor">@color/splash_top</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="materialCardViewStyle">@style/Widget.App.Card</item>
+    </style>
+</resources>

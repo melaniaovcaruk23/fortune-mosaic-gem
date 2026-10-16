@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_dialog_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_surface"
+    android:padding="@dimen/space_large">
+
+    <com.fortunegem.mosaic.core.ui.SectionHeaderView
+        android:id="@+id/settings_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerAccent="@color/primary_violet"
+        app:headerCaption="@string/settings_caption"
+        app:headerTitle="@string/settings_title" />
+
+    <LinearLayout
+        android:id="@+id/settings_sound_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_header"
+        android:layout_marginTop="@dimen/space_large"
+        android:background="@drawable/bg_pill_accent"
+        android:gravity="center_vertical"
+        android:minHeight="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_medium"
+        android:paddingEnd="@dimen/space_medium">
+
+        <ImageView
+            android:id="@+id/settings_sound_icon"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_sound" />
+
+        <TextView
+            android:id="@+id/settings_sound_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_medium"
+            android:layout_weight="1"
+            android:text="@string/sound"
+            android:textAppearance="@style/TextAppearance.App.Title"
+            android:textSize="15sp" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/settings_sound_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settings_vibration_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_sound_row"
+        android:layout_marginTop="@dimen/space_small"
+        android:background="@drawable/bg_pill_accent"
+        android:gravity="center_vertical"
+        android:minHeight="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_medium"
+        android:paddingEnd="@dimen/space_medium">
+
+        <ImageView
+            android:id="@+id/settings_vibration_icon"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_vibration" />
+
+        <TextView
+            android:id="@+id/settings_vibration_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_medium"
+            android:layout_weight="1"
+            android:text="@string/vibration"
+            android:textAppearance="@style/TextAppearance.App.Title"
+            android:textSize="15sp" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/settings_vibration_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settings_close_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_primary"
+        android:layout_below="@id/settings_vibration_row"
+        android:layout_marginTop="@dimen/space_large"
+        android:text="@string/close"
+        style="@style/Widget.App.Button.Primary" />
+
+</RelativeLayout>

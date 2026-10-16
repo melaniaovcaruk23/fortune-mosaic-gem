@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient">
+
+    <ImageView
+        android:id="@+id/splash_backdrop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.55"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_splash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/splash_scrim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/overlay_splash_scrim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/splash_rays"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:alpha="0.75"
+        android:importantForAccessibility="no"
+        android:src="@drawable/decor_prism_rays"
+        app:layout_constraintBottom_toBottomOf="@id/splash_halo"
+        app:layout_constraintEnd_toEndOf="@id/splash_halo"
+        app:layout_constraintStart_toStartOf="@id/splash_halo"
+        app:layout_constraintTop_toTopOf="@id/splash_halo" />
+
+    <View
+        android:id="@+id/splash_halo"
+        android:layout_width="@dimen/gem_halo"
+        android:layout_height="@dimen/gem_halo"
+        android:background="@drawable/bg_gem_halo"
+        app:layout_constraintBottom_toBottomOf="@id/splash_gem"
+        app:layout_constraintEnd_toEndOf="@id/splash_gem"
+        app:layout_constraintStart_toStartOf="@id/splash_gem"
+        app:layout_constraintTop_toTopOf="@id/splash_gem" />
+
+    <ImageView
+        android:id="@+id/splash_gem"
+        android:layout_width="@dimen/sprite_gem_splash"
+        android:layout_height="@dimen/sprite_gem_splash"
+        android:contentDescription="@string/cd_brand_gem"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_gem_violet"
+        app:layout_constraintBottom_toTopOf="@id/splash_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/splash_facet_left"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/decor_facet_small"
+        app:layout_constraintBottom_toBottomOf="@id/splash_gem"
+        app:layout_constraintEnd_toStartOf="@id/splash_gem"
+        app:layout_constraintTop_toTopOf="@id/splash_gem"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <ImageView
+        android:id="@+id/splash_facet_right"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/decor_facet_small"
+        app:layout_constraintBottom_toBottomOf="@id/splash_gem"
+        app:layout_constraintStart_toEndOf="@id/splash_gem"
+        app:layout_constraintTop_toTopOf="@id/splash_gem"
+        app:layout_constraintVertical_bias="0.78" />
+
+    <ImageView
+        android:id="@+id/splash_facet_top"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="@dimen/space_large"
+        android:importantForAccessibility="no"
+        android:src="@drawable/decor_facet_small"
+        app:layout_constraintBottom_toTopOf="@id/splash_gem"
+        app:layout_constraintEnd_toEndOf="@id/splash_gem"
+        app:layout_constraintStart_toStartOf="@id/splash_gem" />
+
+    <TextView
+        android:id="@+id/splash_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_xlarge"
+        android:layout_marginTop="@dimen/space_xlarge"
+        android:layout_marginEnd="@dimen/space_xlarge"
+        android:gravity="center"
+        android:text="@string/brand_title"
+        android:textAppearance="@style/TextAppearance.App.Display"
+        android:shadowColor="@color/accent_cyan"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="12"
+        app:layout_constraintBottom_toTopOf="@id/splash_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_gem" />
+
+    <TextView
+        android:id="@+id/splash_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_medium"
+        android:letterSpacing="0.30"
+        android:text="@string/brand_subtitle"
+        android:textColor="@color/splash_caption"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_title" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/splash_progress"
+        android:layout_width="@dimen/progress_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_medium"
+        android:indeterminate="true"
+        app:indicatorColor="@color/accent_cyan"
+        app:trackColor="@color/track_light"
+        app:trackCornerRadius="2dp"
+        app:trackThickness="4dp"
+        app:layout_constraintBottom_toTopOf="@id/splash_caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/splash_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:accessibilityLiveRegion="polite"
+        android:letterSpacing="0.22"
+        android:text="@string/splash_caption"
+        android:textColor="@color/text_muted"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

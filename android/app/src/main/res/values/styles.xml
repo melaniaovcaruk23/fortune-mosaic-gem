@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.App.Display" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.14</item>
+        <item name="android:textColor">@color/text_on_violet</item>
+    </style>
+
+    <style name="TextAppearance.App.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextAppearance.App.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextAppearance.App.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.App.Value" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextAppearance.App.Label" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.18</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="Widget.App.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textColor">@color/text_on_violet</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:elevation">8dp</item>
+        <item name="backgroundTint">@color/primary_violet</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="rippleColor">@color/ripple_cyan</item>
+        <item name="iconTint">@color/text_on_violet</item>
+        <item name="iconSize">@dimen/icon_size</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/space_small</item>
+    </style>
+
+    <style name="Widget.App.Button.Cta" parent="Widget.App.Button.Primary">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.20</item>
+        <item name="android:elevation">0dp</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="cornerRadius">@dimen/card_radius_large</item>
+        <item name="iconSize">28dp</item>
+    </style>
+
+    <style name="Widget.App.Button.Accent" parent="Widget.App.Button.Primary">
+        <item name="backgroundTint">@color/accent_cyan</item>
+        <item name="rippleColor">@color/ripple_violet</item>
+    </style>
+
+    <style name="Widget.App.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_height_secondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.10</item>
+        <item name="android:textColor">@color/primary_violet_dark</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/translucent_fill</item>
+        <item name="strokeColor">@color/primary_violet</item>
+        <item name="strokeWidth">@dimen/stroke_hairline</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="rippleColor">@color/ripple_violet</item>
+        <item name="iconTint">@color/primary_violet_dark</item>
+        <item name="iconSize">@dimen/icon_size</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+    <style name="Widget.App.Button.IconOnly" parent="Widget.Material3.Button.IconButton">
+        <item name="android:minWidth">@dimen/icon_button_size</item>
+        <item name="android:minHeight">@dimen/icon_button_size</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="iconTint">@color/primary_violet</item>
+        <item name="iconSize">@dimen/icon_size</item>
+        <item name="rippleColor">@color/ripple_violet</item>
+    </style>
+
+    <style name="Widget.App.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeColor">@color/stroke_soft</item>
+        <item name="strokeWidth">@dimen/stroke_hairline</item>
+    </style>
+
+    <style name="Widget.App.Card.Raised" parent="Widget.App.Card">
+        <item name="cardCornerRadius">@dimen/card_radius_large</item>
+        <item name="cardElevation">6dp</item>
+    </style>
+
+    <style name="Theme.FortuneMosaicGem.Dialog" parent="Theme.Material3.DayNight.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="colorPrimary">@color/primary_violet</item>
+        <item name="colorOnPrimary">@color/text_on_violet</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+    </style>
+</resources>

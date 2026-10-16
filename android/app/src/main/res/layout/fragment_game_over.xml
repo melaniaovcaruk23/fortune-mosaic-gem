@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/result_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_result_gradient"
+    android:paddingStart="@dimen/screen_side_padding"
+    android:paddingTop="@dimen/screen_top_padding"
+    android:paddingEnd="@dimen/screen_side_padding"
+    android:paddingBottom="@dimen/space_large">
+
+    <ImageView
+        android:id="@+id/result_backdrop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.42"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/result_bloom"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:alpha="0.8"
+        android:importantForAccessibility="no"
+        android:src="@drawable/decor_bloom_amber"
+        app:layout_constraintBottom_toBottomOf="@id/result_medal_card"
+        app:layout_constraintEnd_toEndOf="@id/result_medal_card"
+        app:layout_constraintStart_toStartOf="@id/result_medal_card"
+        app:layout_constraintTop_toTopOf="@id/result_medal_card" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/result_medal_card"
+        android:layout_width="@dimen/medal_card"
+        android:layout_height="@dimen/medal_card"
+        android:layout_marginTop="@dimen/space_xlarge"
+        style="@style/Widget.App.Card.Raised"
+        app:cardCornerRadius="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/result_medal"
+            android:layout_width="@dimen/sprite_medal"
+            android:layout_height="@dimen/sprite_medal"
+            android:layout_gravity="center"
+            android:contentDescription="@string/cd_medal"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sprite_medal_prism" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/result_headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_large"
+        android:accessibilityLiveRegion="polite"
+        android:gravity="center"
+        android:text="@string/result_restored"
+        android:textAppearance="@style/TextAppearance.App.Headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_medal_card" />
+
+    <TextView
+        android:id="@+id/result_subline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_small"
+        android:gravity="center"
+        android:text="@string/label_sealed"
+        android:textAppearance="@style/TextAppearance.App.Body"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_headline" />
+
+    <LinearLayout
+        android:id="@+id/result_stars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_medium"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_subline">
+
+        <ImageView
+            android:id="@+id/result_star_one"
+            android:layout_width="@dimen/star_size"
+            android:layout_height="@dimen/star_size"
+            android:layout_marginEnd="@dimen/space_small"
+            android:contentDescription="@string/cd_star_earned"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_star_facet" />
+
+        <ImageView
+            android:id="@+id/result_star_two"
+            android:layout_width="@dimen/star_size"
+            android:layout_height="@dimen/star_size"
+            android:layout_marginEnd="@dimen/space_small"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_star_facet" />
+
+        <ImageView
+            android:id="@+id/result_star_three"
+            android:layout_width="@dimen/star_size"
+            android:layout_height="@dimen/star_size"
+            android:importantForAccessibility="no"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_star_facet" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result_stat_row"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_large"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_stars">
+
+        <com.fortunegem.mosaic.core.ui.StatCardView
+            android:id="@+id/result_stat_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_small"
+            android:layout_weight="1"
+            app:statAccent="@color/primary_violet"
+            app:statLabel="@string/label_score"
+            app:statValue="@string/label_score" />
+
+        <com.fortunegem.mosaic.core.ui.StatCardView
+            android:id="@+id/result_stat_sealed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/space_small"
+            android:layout_weight="1"
+            app:statAccent="@color/accent_cyan"
+            app:statLabel="@string/label_sealed"
+            app:statValue="@string/label_sealed" />
+
+        <com.fortunegem.mosaic.core.ui.StatCardView
+            android:id="@+id/result_stat_best"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:statAccent="@color/accent_amber"
+            app:statLabel="@string/label_best"
+            app:statValue="@string/label_best" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/result_again_tile"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_primary"
+        android:layout_marginBottom="@dimen/space_medium"
+        android:background="@drawable/bg_button_primary"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toTopOf="@id/result_menu_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/result_again_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/play_again"
+            style="@style/Widget.App.Button.Cta"
+            android:textSize="17sp"
+            app:icon="@drawable/ic_gem_cut" />
+
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/result_menu_button"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_secondary"
+        android:text="@string/menu"
+        style="@style/Widget.App.Button.Secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

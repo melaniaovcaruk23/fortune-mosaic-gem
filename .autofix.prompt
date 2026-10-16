@@ -1,0 +1,16 @@
+Fix the sources of project FortuneMosaicGem (platform: kotlin, ticket ). Round 1 of 3.
+
+Project: C:/AndroidWorkspace/projects/FortuneMosaicGem
+Generation rules (mandatory): C:/AndroidWorkspace/CLAUDE-kotlin.md
+What the pipeline gates found and where it stalled: C:/AndroidWorkspace/projects/FortuneMosaicGem/.autofix-findings.txt — read it in full.
+
+Requirements:
+  * Change ONLY project files. Do not touch template files (rule §00). Fix via
+    your own objects/overrides (C.2, C.18), not by editing the template's base prefabs.
+  * Fix the cause, not the symptom. Do NOT weaken or bypass checks, delete nothing
+    to pass a gate.
+  * BEFORE FINISHING run ALL pipeline gates yourself and get exit 0:
+        bash C:/AndroidWorkspace/scripts/lib/unity-gates.sh C:/AndroidWorkspace/projects/FortuneMosaicGem
+    If a gate fails — fix and run again. A gate marked soft is acceptable, HARD is not.
+  * Do not start the build and do not touch the pipeline — autofix will do the rebuild and the screenshot comparison.
+  * At the end of the answer, one line: what exactly you changed (files and gist).

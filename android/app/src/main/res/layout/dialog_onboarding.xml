@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/onboarding_dialog_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_surface"
+    android:padding="@dimen/space_large">
+
+    <com.fortunegem.mosaic.core.ui.SectionHeaderView
+        android:id="@+id/onboarding_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:headerAccent="@color/accent_amber"
+        app:headerCaption="@string/brand_subtitle"
+        app:headerTitle="@string/onboarding_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/onboarding_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onboarding_header"
+        android:layout_marginTop="@dimen/space_medium"
+        android:maxHeight="300dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/onboarding_lines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/onboarding_line_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_pill_accent"
+                android:padding="@dimen/space_medium"
+                android:text="@string/onboarding_line_one"
+                android:textAppearance="@style/TextAppearance.App.Body" />
+
+            <TextView
+                android:id="@+id/onboarding_line_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:background="@drawable/bg_pill_accent"
+                android:padding="@dimen/space_medium"
+                android:text="@string/onboarding_line_two"
+                android:textAppearance="@style/TextAppearance.App.Body" />
+
+            <TextView
+                android:id="@+id/onboarding_line_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:background="@drawable/bg_pill_accent"
+                android:padding="@dimen/space_medium"
+                android:text="@string/onboarding_line_three"
+                android:textAppearance="@style/TextAppearance.App.Body" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/onboarding_confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_primary"
+        android:layout_below="@id/onboarding_scroll"
+        android:layout_marginTop="@dimen/space_large"
+        android:text="@string/got_it"
+        style="@style/Widget.App.Button.Primary" />
+
+</RelativeLayout>

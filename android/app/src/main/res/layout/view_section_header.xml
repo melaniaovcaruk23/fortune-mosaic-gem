@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <View
+        android:id="@+id/header_bar"
+        android:layout_width="3dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="@dimen/space_small"
+        android:background="@drawable/bg_accent_bar" />
+
+    <LinearLayout
+        android:id="@+id/header_text_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery_title"
+            android:textAppearance="@style/TextAppearance.App.Title"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/header_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery_caption"
+            android:textAppearance="@style/TextAppearance.App.Label" />
+
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,12 @@
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/bg_game.png|845275|1792045185.8155015000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/bg_menu.png|959944|1792045156.6982284000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/bg_result.png|403859|1792045258.6512090000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/bg_splash.png|1039092|1792045078.6882977000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/icon_1024.png|1647583|1792045049.4914932000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/sprite_gem_amber.png|344889|1792046002.1660687000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/sprite_gem_cyan.png|339367|1792045636.6904891000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/sprite_gem_mint.png|363790|1792046213.9778844000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/sprite_gem_prism.png|273275|1792046323.1909586000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/sprite_gem_rose.png|242109|1792046107.9628994000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/sprite_gem_violet.png|326144|1792045392.5005236000
+/c/AndroidWorkspace/projects/FortuneMosaicGem/Assets/sprite_medal_prism.png|360775|1792046499.1989982000

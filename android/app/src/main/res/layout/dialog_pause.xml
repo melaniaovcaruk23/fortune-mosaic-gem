@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pause_dialog_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_surface"
+    android:padding="@dimen/space_large">
+
+    <ImageView
+        android:id="@+id/pause_gem"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/cd_brand_gem"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sprite_gem_prism" />
+
+    <TextView
+        android:id="@+id/pause_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pause_gem"
+        android:layout_marginTop="@dimen/space_medium"
+        android:gravity="center"
+        android:text="@string/pause_title"
+        android:textAppearance="@style/TextAppearance.App.Title" />
+
+    <TextView
+        android:id="@+id/pause_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pause_title"
+        android:layout_marginTop="@dimen/space_tiny"
+        android:gravity="center"
+        android:text="@string/pause_caption"
+        android:textAppearance="@style/TextAppearance.App.Label" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pause_resume_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_primary"
+        android:layout_below="@id/pause_caption"
+        android:layout_marginTop="@dimen/space_large"
+        android:text="@string/resume"
+        style="@style/Widget.App.Button.Primary" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pause_restart_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_secondary"
+        android:layout_below="@id/pause_resume_button"
+        android:layout_marginTop="@dimen/space_small"
+        android:text="@string/restart"
+        style="@style/Widget.App.Button.Secondary" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pause_menu_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_secondary"
+        android:layout_below="@id/pause_restart_button"
+        android:layout_marginTop="@dimen/space_small"
+        android:text="@string/menu"
+        style="@style/Widget.App.Button.Secondary" />
+
+</RelativeLayout>
